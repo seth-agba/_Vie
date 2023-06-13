@@ -1,22 +1,21 @@
 import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, NavLink } from 'react-router-dom';
+import { links } from '../data';
 export default function Layout() {
   return (
-    <>
-      <nav>
+    <nav>
+      <div>
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/Blogs">Blog</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
+          {links.map(({ path, name }, index) => {
+            return (
+              <li key={index}>
+                <NavLink to={path}>{name}</NavLink>
+              </li>
+            );
+          })}
         </ul>
-      </nav>
-      <Outlet />
-    </>
+        <Outlet />
+      </div>
+    </nav>
   );
 }
