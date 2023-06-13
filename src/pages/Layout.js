@@ -11,6 +11,9 @@ export default function Layout() {
           <li>
             <Link to="/Blogs">Blog</Link>
           </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
       </nav>
       <Outlet />

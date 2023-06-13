@@ -1,22 +1,24 @@
 import React from 'react';
-import ReactDom from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import Blogs from './pages/Blogs';
-import Home from './pages/Home';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
-import NotFound from './pages/NotFound';
-import './style.css';
+import Home from './pages/Home';
+import Blogs from './pages/Blogs';
+import Contact from './pages/Contact';
+import NoPage from './pages/NoPage';
 
-export default function App() {
+const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route index element={<Home />} />
-        <Route path="/Blogs" element={<Blogs />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="Blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
-}
+};
+export default App;
