@@ -14,7 +14,7 @@ export default function Layout() {
             );
           })}
         </ul>
-        <Outlet />
+        
       </div>
     </nav>
   );

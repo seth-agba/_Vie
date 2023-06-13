@@ -9,16 +9,17 @@ import NoPage from './pages/NoPage';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
+    <>
+      <BrowserRouter>
+        <Layout />
+        <Routes>
           <Route index element={<Home />} />
           <Route path="Blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 export default App;
