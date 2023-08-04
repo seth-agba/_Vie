@@ -1,12 +1,10 @@
-import { useState } from "react";
+import { useState , React} from "react";
 import { Link, NavLink } from "react-router-dom";
 import { links } from "../data";
 import { MdOutlineClose } from "react-icons/md";
 
 import { VscThreeBars } from "react-icons/vsc";
 
-import "./navbar.css";
-import Logo from "../images/3.png";
 const NavBar = () => {
     const [isNavShowing, setIsNavShowing] = useState(false);
 

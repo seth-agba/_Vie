@@ -1,7 +1,12 @@
 import React from 'react';
-import { Outlet, Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { MdOutlineClose } from 'react-icons/md';
+import { VscThreeBars } from 'react-icons/vsc';
+
 import { links } from '../data';
-export default function Layout() {
+
+export default function NavBar() {
   return (
     <nav>
       <div>
@@ -14,7 +19,6 @@ export default function Layout() {
             );
           })}
         </ul>
-        
       </div>
     </nav>
   );
