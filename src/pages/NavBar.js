@@ -5,7 +5,7 @@ import { MdOutlineClose } from 'react-icons/md';
 import { VscThreeBars } from 'react-icons/vsc';
 
 import { links } from '../data';
-import Logo from '/images/3.png';
+import Logo from '../images/3.png';
 export default function NavBar() {
   return (
     <nav>
