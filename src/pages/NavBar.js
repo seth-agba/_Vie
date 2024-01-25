@@ -5,7 +5,7 @@ import { MdOutlineClose } from 'react-icons/md';
 import { VscThreeBars } from 'react-icons/vsc';
 
 import { links } from '../data';
-import Logo from '../images/3.png';
+import Logo from '../images/logo4.png';
 export default function NavBar() {
   return (
     <nav>
@@ -21,6 +21,7 @@ export default function NavBar() {
           })}
         </ul>
       </div>
+      <div> <a className='btn primary-btn' > connection </a> </div>
     </nav>
   );
 }
